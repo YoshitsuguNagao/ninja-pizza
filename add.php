@@ -22,7 +22,7 @@ if(isset($_POST['submit'])) {
     echo 'A title is required <br>';
   } else {
     $title = $_POST['title'];
-    if(preg_match('/^[a-zA-Z\s]+$/'), $title) {
+    if(!preg_match('/^[a-zA-Z\s]+$/', $title)) {
       echo 'Title must be letters and spaces only';
     }
   }
