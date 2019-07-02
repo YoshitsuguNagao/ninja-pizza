@@ -33,9 +33,10 @@
       <?php foreach($pizzas as $pizza): ?>
         <div class="col s6 m4">
           <div class="card z-depth-0">
+            <img src="./img/pizza.svg" class="pizza" alt="pizza">
             <div class="card-content center">
               <h6><?php echo htmlspecialchars($pizza['title']); ?></h6>
-              <ul>
+              <ul class="grey-text">
                 <?php foreach(explode(',', $pizza['ingredients']) as $ing): ?>
                 <li><?php echo htmlspecialchars($ing); ?></li>
                 <?php endforeach; ?>

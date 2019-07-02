@@ -41,7 +41,7 @@
 
   <?php include('templates/header.php'); ?>
 
-  <div class="containar center">
+  <div class="containar center grey-text">
     <?php if($pizza): ?>
       <h4><?php echo htmlspecialchars($pizza['title']); ?></h4>
       <p>Created by <?php echo htmlspecialchars($pizza['email'])?></p>
