@@ -1,11 +1,7 @@
 <?php
 
-  // connect to the database
-  $conn = mysqli_connect('localhost', 'yoshi', 'test1234', 'ninja_pizza');
-  // check connection
-  if(!$conn){
-    echo 'Connection error: '. mysqli_connect_error();
-  }
+  include('./config/db_connect.php');
+
   // write query for all pizzas
   $sql = 'SELECT title, ingredients, id FROM pizzas ORDER BY created_at';
 
@@ -32,10 +28,10 @@
   <?php include('templates/header.php'); ?>
 
   <h4 class="center grey-text">Pizzas!</h4>
-  <div class="conteiner">
+  <div class="container">
     <div class="row">
       <?php foreach($pizzas as $pizza): ?>
-        <div class="col s6 md3">
+        <div class="col s6 m4">
           <div class="card z-depth-0">
             <div class="card-content center">
               <h6><?php echo htmlspecialchars($pizza['title']); ?></h6>
